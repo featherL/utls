@@ -167,6 +167,10 @@ func (c *Conn) clientHandshake(ctx context.Context) (err error) {
 	}
 	c.serverName = hello.serverName
 
+	if c.config.sessionId != nil {
+		hello.sessionId = c.config.sessionId
+	}
+
 	cacheKey, session, earlySecret, binderKey, err := c.loadSession(hello)
 	if err != nil {
 		return err

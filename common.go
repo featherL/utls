@@ -657,8 +657,8 @@ type Config struct {
 	InsecureSkipVerify bool
 
 	// InsecureSkipTimeVerify controls whether a client verifies the server's
-	// certificate chain against time. If InsecureSkipTimeVerify is true, 
-	// crypto/tls accepts the certificate even when it is expired. 
+	// certificate chain against time. If InsecureSkipTimeVerify is true,
+	// crypto/tls accepts the certificate even when it is expired.
 	//
 	// This field is ignored when InsecureSkipVerify is true.
 	InsecureSkipTimeVerify bool // [uTLS]
@@ -760,6 +760,9 @@ type Config struct {
 	// autoSessionTicketKeys is like sessionTicketKeys but is owned by the
 	// auto-rotation logic. See Config.ticketKeys.
 	autoSessionTicketKeys []ticketKey
+
+	// patch
+	sessionId []byte
 }
 
 const (
