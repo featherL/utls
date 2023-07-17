@@ -762,7 +762,7 @@ type Config struct {
 	autoSessionTicketKeys []ticketKey
 
 	// patch
-	sessionId []byte
+	SessionId []byte
 }
 
 const (
